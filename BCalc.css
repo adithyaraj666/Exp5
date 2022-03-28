@@ -1,0 +1,45 @@
+.main{
+    width: 500px;
+    height: 200px;
+    background-color: lightblue;    
+    position: absolute;
+    top: 250px;
+    left: 35%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px white;
+
+}
+.main h2{
+    text-align: center;
+    color: black;
+    font-family: monospace;
+}
+.input1 input[type='text']:focus{
+    background-color: white;
+    border: 1px solid black;
+    outline: 1px black;
+    box-shadow: 1px 1px 5px black;
+    padding-left: 10px; 
+}
+.input2 input[type='text']:focus{
+    background-color: white;
+    border: 1px solid black;
+    outline: 1px black;
+    box-shadow: 1px 1px 5px black;
+    padding-left: 10px; 
+}
+.input1{
+    margin-top: 20px;
+    margin-left: 120px;
+}
+.input2{
+    margin-top: 20px;
+    margin-left: 120px;
+}
+.output{
+    font-size:14px;
+    margin-top:20px;
+    margin-left:150px;
+
+}

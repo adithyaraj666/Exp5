@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Simple Calculator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="calc.css" rel="stylesheet">
+<script>
+            function addition(){
+                var var1= parseInt(document.getElementById('in1').value);
+                var var2= parseInt(document.getElementById('in2').value);
+                var result = var1 + var2;
+                document.getElementById('result').value=result;
+            }
+            function subtract(){
+                var var1= parseInt(document.getElementById('in1').value);
+                var var2= parseInt(document.getElementById('in2').value);
+                var result = var1 - var2;
+                document.getElementById('result').value=result;
+            }
+            function multiply(){
+                var var1= parseInt(document.getElementById('in1').value);
+                var var2= parseInt(document.getElementById('in2').value);
+                var result = var1 * var2;
+                document.getElementById('result').value=result;
+            }
+            function division(){
+                var var1= parseInt(document.getElementById('in1').value);
+                var var2= parseInt(document.getElementById('in2').value);
+                var result = var1 / var2;
+                document.getElementById('result').value=result;
+            }
+            function Clear() {
+            document.getElementById('in1').value = "";
+            document.getElementById('in2').value = "";
+            document.getElementById('result').value = "";
+            }
+</script>
+</head>
+<body>
+<p>
+<img src="https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-vector-school-bag-calculator-cyan-cartoon-banner-image_166801.jpg" style='width: 100%; height: 100%' alt='image'>
+
+</p>
+<div class="main">
+<div id="C1" class='input1'>
+<h1>Simple calculator</h1>
+<input id="in1" type="text" placeholder="Enter a number">
+<input id="in2" type="text" placeholder="Enter a number">
+<br><br>
+</div>
+<div class='button1'>
+<button onclick="addition()">+ Add</button>
+<button onclick="subtraction()">- subtract</button><!-- for subtraction button -->
+<button onclick="multiply()">* Multiply</button><!-- for multiplication button -->
+<button onclick="division()">/ divide</button><!-- for division button -->
+</div>
+<div class='output'>
+<input type='text' placeholder="Result" readonly id="result">
+<button onclick="Clear()"  > C </button>
+</div>
+</div>
+</body>
+</html>

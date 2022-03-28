@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Convertor</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="Conv.css" />
+<script>
+      function conv() {
+        var c1 = document.getElementById('var1').value;
+        var c2 = document.getElementById('var2').value;
+        let amount = document.getElementById('amnt').value;
+        var res = document.getElementById('result');
+
+        if (c1 === 'USD' && c2 === 'INR') {
+          res.innerHTML = '₹ ' + amount * 74.84;
+        } else if (c1 === 'INR' && c2 === 'USD') {
+          res.innerHTML = '$ ' + amount * 0.013;
+        } else if (c1 === c2 && c1 === 'USD') {
+          res.innerHTML = '$ ' + amount;
+        } else if (c1 === c2 && c1 === 'INR') {
+          res.innerHTML = '₹ ' + amount;
+        }
+      }
+</script>
+</head>
+
+
+<body>
+<p>
+<img src="https://lawliberty.org/app/uploads/2020/01/shuttersto-dark-money-two.jpg" alt="currency" style="height: 100%; width: 100%;">
+</p>
+<div class="main">
+
+<h2>Currency Convertor</h2>
+
+<div class="input1">
+<label>Amount : </label>
+<input onkeyup="conv()" id="amnt" type="text" placeholder="0" />
+</div>
+<div class="dropdown">
+<label>From : &ensp;</label>
+<select onchange="conv()" id="var1">
+<option disabled selected style="color:blue;">-Select Currency-</option>
+<option>USD</option>
+<option>INR</option>
+</select>
+<br>
+
+<label>To : &emsp;&ensp;</label>
+
+<select onchange="conv()" id="var2">
+<option disabled selected style="color:blue;">-Select Currency-</option>
+<option>USD</option>
+<option>INR</option>
+</select>
+</div>
+<div id="result" class="result"></div>
+</div>
+
+</body>
+</html>
